@@ -10,5 +10,29 @@
         "author": "Jane Doe",
         "title": "Second Post",
         "content": "This is another post."
+    },
+    {
+        "id": 3,
+        "author": "Hannah Tulp",
+        "title": "Third Post",
+        "content": "And another post :)"
+    },
+    {
+        "id": 4,
+        "author": "Michael Frost",
+        "title": "Learning Flask",
+        "content": "Today I built my first dynamic template!"
+    },
+    {
+        "id": 5,
+        "author": "Alena",
+        "title": "My First Edit",
+        "content": "I tested the update function successfully."
+    },
+    {
+        "id": 6,
+        "author": "Sophie Lights",
+        "title": "JSON Tips",
+        "content": "Remember: JSON does not allow trailing commas!"
     }
 ]

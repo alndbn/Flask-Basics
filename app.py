@@ -17,6 +17,15 @@ def save_posts(posts):
         json.dump(posts, file, indent=4)
 
 
+def fetch_post_by_id(post_id):
+    """Return a single post dictionary by ID, or None if not found."""
+    posts = load_posts()
+    for post in posts:
+        if post["id"] == post_id:
+            return post
+    return None
+
+
 @app.route('/')
 def index():
     "Render the homepage with all blog posts"
@@ -67,9 +76,34 @@ def delete_post(post_id):
     return redirect(url_for("index"))
 
 
-@app.route('/')
-def hello_world():
-    return 'Hello, World!'
+@app.route("/update/<int:post_id>", methods=["GET", "POST"])
+def update(post_id):
+    """Update an existing blog post."""
+
+    post = fetch_post_by_id(post_id)
+    if post is None:
+        return "Post not found", 404
+
+    if request.method == "POST":
+        new_author = request.form.get("author")
+        new_title = request.form.get("title")
+        new_content = request.form.get("content")
+
+        posts = load_posts()
+
+        for p in posts:
+            if p["id"] == post_id:
+                p["author"] = new_author
+                p["title"] = new_title
+                p["content"] = new_content
+
+
+        save_posts(posts)
+
+        return redirect(url_for("index"))
+
+    return render_template("update.html", post=post)
+
 
 
 

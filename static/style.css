@@ -1,17 +1,17 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #F5F5F5;
+    background-color: linen;
     padding: 20px;
-    color: #333;
+    color: darkgoldenrod;
 }
 
 h1 {
     text-align: center;
-    color: #4F4F4F;
+    color: darkgoldenrod;
 }
 
 .post {
-    background-color: #FFF;
+    background-color: lightyellow;
     border: 1px solid #DDD;
     padding: 20px;
     margin-bottom: 20px;
@@ -27,13 +27,27 @@ h1 {
 }
 
 .delete-button {
-    color: white;
-    background: red;
+    color: lightyellow;
+    background: burlywood;
     padding: 5px 10px;
     border-radius: 5px;
     text-decoration: none;
     margin-right: 10px;
 }
 .delete-button:hover {
-    background: darkred;
+    background: linen;
 }
+
+.add-button {
+    background: linen;
+    color: darkgoldenrod;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.add-button:hover {
+    background: #1565C0;
+}
+

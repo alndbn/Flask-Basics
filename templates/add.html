@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add a new blog post</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Add a new blog post</h1>
+
+    <form action="{{ url_for('add') }}" method="post">
+        <div class="form-group">
+            <label for="author">Author</label><br>
+            <input type="text" id="author" name="author" required>
+        </div>
+
+        <div class="form-group">
+            <label for="title">Title</label><br>
+            <input type="text" id="title" name="title" required>
+        </div>
+
+        <div class="form-group">
+            <label for="content">Content</label><br>
+            <textarea id="content" name="content" rows="5" required></textarea>
+        </div>
+
+        <button type="submit">Add post</button>
+    </form>
+
+    <p><a href="{{ url_for('index') }}">Back to homepage</a></p>
+</body>
+</html>

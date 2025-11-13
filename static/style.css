@@ -25,3 +25,14 @@ h1 {
 .post p {
     margin: 10px 0;
 }
+
+.delete-button {
+    color: white;
+    background: red;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.delete-button:hover {
+    background: darkred;
+}
